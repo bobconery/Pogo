@@ -1,0 +1,65 @@
+{
+  "name": "pogo",
+  "version": "0.1.0",
+  "description": "A MongoDB-compatible API with SQLite backend for TypeScript applications",
+  "keywords": [
+    "mongodb",
+    "sqlite",
+    "database",
+    "typescript",
+    "orm",
+    "document-database",
+    "nodejs"
+  ],
+  "homepage": "https://github.com/your-username/Pogo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/Pogo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/Pogo/issues"
+  },
+  "license": "MIT",
+  "author": "Pogo Contributors",
+  "main": "index.ts",
+  "module": "index.ts",
+  "types": "index.ts",
+  "exports": {
+    ".": {
+      "types": "./index.ts",
+      "import": "./index.ts"
+    }
+  },
+  "files": [
+    "index.ts",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/pluralize": "^0.0.33",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "scripts": {
+    "dev": "ts-node --esm example.ts",
+    "example": "ts-node --esm example.ts",
+    "test": "jest",
+    "build": "tsc --build",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "type": "module",
+  "dependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "better-sqlite3": "^12.2.0",
+    "pluralize": "^8.0.0"
+  }
+}
